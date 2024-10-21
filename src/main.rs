@@ -3,5 +3,5 @@ mod floor;
 mod person;
 
 fn main() {
-    println!("Hello, world! ");
+    println!("Hello Lift!");
 }
