@@ -1,5 +1,3 @@
-mod lift{
-    struct Lift{
-        button: u16,
-    }
+struct Lift {
+    button: u16,
 }
