@@ -1,6 +1,17 @@
-struct Lift {
-    button: u16,
-    lift_max_capacity: u8,
+#[derive(Debug)]
+enum ButtonDirection {
+    Up,
+    Down,
 }
-
-// impl new for Lift {}
+#[derive(Debug)]
+struct Lift {
+    button: ButtonDirection,
+    lift_max_capacity: u8,
+    current_position: u16,
+}
+//
+// impl Lift {
+//     fn new (-> Self{
+//
+//     }
+// }
