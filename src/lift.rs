@@ -4,10 +4,11 @@ enum ButtonDirection {
     Down,
 }
 #[derive(Debug)]
-struct Lift {
+pub struct Lift {
     button: ButtonDirection,
     lift_max_capacity: u8,
     current_position: u16,
+    lift_no: u8,
 }
 //
 // impl Lift {
