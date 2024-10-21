@@ -1,5 +1,1 @@
-pub mod person{
-    pub struct Person{
-
-    }
-}
+pub struct Person {}
