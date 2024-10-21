@@ -1,4 +1,4 @@
-use crate::person;
+use crate::person::Person;
 
 struct Floor {
     // folks - persons waiting for the Lift to arrive at the Floor
