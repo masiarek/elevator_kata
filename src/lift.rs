@@ -10,9 +10,3 @@ pub struct Lift {
     current_position: u16,
     lift_no: u8,
 }
-//
-// impl Lift {
-//     fn new (-> Self{
-// testerb test test test again
-//     }
-// }
