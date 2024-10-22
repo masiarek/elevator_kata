@@ -10,3 +10,4 @@ pub struct Lift {
     current_position: u16,
     lift_no: u8,
 }
+//test
