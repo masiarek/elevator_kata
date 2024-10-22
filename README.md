@@ -1,6 +1,6 @@
 # elevator_kata
 
-=Simulate a lift in the building=
+#Simulate a lift in the building
 https://www.codewars.com/kata/58905bfa1decb981da00009e
 
 A multi-floor building has a Lift in it.
