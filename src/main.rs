@@ -1,14 +1,20 @@
 mod building;
 mod floor;
-mod lift;
 mod person;
 mod tests;
-
+mod the_lift;
 use rand::Rng;
-fn main() {
-    println!("Hello Lift!");
 
-    fn the_lift(queues: &[Vec<u32>], capacity: u32) -> Vec<u32> {
-        vec![]
-    }
+fn the_lift(queues: &[Vec<u32>], capacity: u32) -> Vec<u32> {
+    vec![]
+}
+
+fn main() {
+    println!("Lift simulation program. \nRun 'cargo test.'");
+
+    let person = person::Person::new(1, 5);
+    println!(
+        "Person: {}, Requested Floor: {}",
+        person.person, person.requested_floor_number
+    );
 }

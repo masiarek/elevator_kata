@@ -1,18 +1,12 @@
 #[derive(Debug)]
-enum ButtonDirection {
+pub enum ButtonDirection {
     Up,
     Down,
 }
 #[derive(Debug)]
 pub struct Lift {
     button: ButtonDirection,
-    lift_max_capacity: u8,
+    capacity: u8, // capacity maximum number of people allowed in the lift
     current_position: u16,
     lift_no: u8,
 }
-//
-// impl Lift {
-//     fn new (-> Self{
-//
-//     }
-// }

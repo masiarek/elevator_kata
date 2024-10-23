@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use super::the_lift;
+    use crate::the_lift;
 
     fn print_queues(queues: &[Vec<u32>], capacity: u32) -> String {
         let mut result = format!("\nLift capacity = {capacity}\n\n Floor    Queue");
