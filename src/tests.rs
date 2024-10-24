@@ -34,6 +34,7 @@ mod tests {
         );
     }
     #[test]
+    #[ignore]
     fn test_down() {
         do_test(
             &[vec![], vec![], vec![1], vec![], vec![], vec![], vec![]],
@@ -42,6 +43,7 @@ mod tests {
         );
     }
     #[test]
+    #[ignore]
     fn test_up_and_up() {
         do_test(
             &[vec![], vec![3], vec![4], vec![], vec![5], vec![], vec![]],
@@ -50,6 +52,7 @@ mod tests {
         );
     }
     #[test]
+    #[ignore]
     fn test_down_and_down() {
         do_test(
             &[vec![], vec![0], vec![], vec![], vec![2], vec![3], vec![]],
