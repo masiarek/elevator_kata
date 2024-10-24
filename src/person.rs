@@ -1,6 +1,7 @@
-/// This module contains the Person struct and its implementation (rargo test --doc)
-/// Link to the URL: https://www.codewars.com/kata/58905bfa1decb981da00009e
-/// The link works OK in the code itself - but not in the browser
+use rand::thread_rng;
+/// This module contains the Person struct and its implementation.
+/// Link to the URL: <https://www.codewars.com/kata/58905bfa1decb981da00009e>
+///
 /*
 - People are in "queues" that represent their order of arrival to wait for the Lift
 - All people can press the UP/DOWN Lift-call buttons
@@ -10,20 +11,25 @@
 - If a person is unable to enter a full Lift, they will press the UP/DOWN Lift-call button
   again after it has departed without them
  */
+use rand::Rng;
+
 pub struct Person {
-    pub person: u16,
+    pub id: u8,
     pub requested_floor_number: u16,
 }
 
 impl Person {
-    pub fn new(person: u16, requested_floor_number: u16) -> Self {
+    pub fn new() -> Self {
+        let mut rng = rand::thread_rng();
         Self {
-            person,
-            requested_floor_number,
+            id: rng.gen_range(1..=u8::MAX),
+            requested_floor_number: 1,
         }
     }
 }
-
-// fn number_of_people(floor: Floor){
-// let num_of_people_of_floor = rand::thread_rng().gen_range(1..5);
-// println!("Number of people on floor {}", num_of_people_of_floor)
+// test cases are using simple arrays to represent the queues (with people in them)
+// - maybe there is no need to create a struct for the person?
+// - use a simple vec with u16 as requested floor number
+// the benefit of a person struct
+// - store more information about the person
+// - easier debugging - which person got in/out - on which floor

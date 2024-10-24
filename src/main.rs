@@ -1,3 +1,4 @@
+#![warn(clippy::all, clippy::pedantic)]
 mod building;
 mod floor;
 mod person;
@@ -10,11 +11,17 @@ fn the_lift(queues: &[Vec<u32>], capacity: u32) -> Vec<u32> {
 }
 
 fn main() {
-    println!("Lift simulation program. \nRun 'cargo test.'");
+    println!("Lift simulation program - run 'cargo test.'");
+    let mut vec = vec![];
+    for _ in 0..4 {
+        let person = person::Person::new();
+        vec.push(person);
+    }
 
-    let person = person::Person::new(1, 5);
-    println!(
-        "Person: {}, Requested Floor: {}",
-        person.person, person.requested_floor_number
-    );
+    for e in vec.iter() {
+        println!(
+            "Person: {}, Requested Floor: {}",
+            e.id, e.requested_floor_number
+        );
+    }
 }

@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod tests {
+mod standard_tests {
     use crate::the_lift;
 
     fn print_queues(queues: &[Vec<u32>], capacity: u32) -> String {
