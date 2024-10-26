@@ -1,7 +1,7 @@
-use rand::thread_rng;
-/// This module contains the Person struct and its implementation.
-/// Link to the URL: <https://www.codewars.com/kata/58905bfa1decb981da00009e>
-///
+//! This module contains the Person struct and its implementation.
+//! Link to the URL: <https://www.codewars.com/kata/58905bfa1decb981da00009e>
+//!
+//! This is crate level doc...
 /*
 - People are in "queues" that represent their order of arrival to wait for the Lift
 - All people can press the UP/DOWN Lift-call buttons
@@ -11,18 +11,23 @@ use rand::thread_rng;
 - If a person is unable to enter a full Lift, they will press the UP/DOWN Lift-call button
   again after it has departed without them
  */
-use rand::Rng;
+/// learn the difference between module and crate documentation - this is Person...
+///
+/// New paragraph test. Why is this line not printing in the doc...
+/// another line.
+///
+///
 
+#[derive(Debug)]
 pub struct Person {
-    pub id: u8,
+    pub id: usize,
     pub requested_floor_number: u16,
 }
 
 impl Person {
-    pub fn new() -> Self {
-        let mut rng = rand::thread_rng();
-        Self {
-            id: rng.gen_range(1..=u8::MAX),
+    pub fn new(id: usize) -> Self {
+        Person {
+            id,
             requested_floor_number: 1,
         }
     }

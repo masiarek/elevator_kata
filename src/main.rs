@@ -4,7 +4,6 @@ mod floor;
 mod person;
 mod tests;
 mod the_lift;
-use rand::Rng;
 
 fn the_lift(queues: &[Vec<u32>], capacity: u32) -> Vec<u32> {
     vec![]
@@ -12,16 +11,19 @@ fn the_lift(queues: &[Vec<u32>], capacity: u32) -> Vec<u32> {
 
 fn main() {
     println!("Lift simulation program - run 'cargo test.'");
+    let mut id = 0;
+
     let mut vec = vec![];
     for _ in 0..4 {
-        let person = person::Person::new();
+        id += 1;
+        let person = crate::person::Person::new(id);
         vec.push(person);
     }
 
-    for e in vec.iter() {
+    for person in &vec {
         println!(
             "Person: {}, Requested Floor: {}",
-            e.id, e.requested_floor_number
+            person.id, person.requested_floor_number
         );
     }
 }

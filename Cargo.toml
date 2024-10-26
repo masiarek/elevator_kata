@@ -9,3 +9,4 @@ dead_code = "allow"
 
 [dependencies]
 rand = "0.9.0-alpha.2"
+rand_chacha = "0.9.0-alpha.2"
