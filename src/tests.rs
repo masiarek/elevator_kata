@@ -16,7 +16,10 @@ mod standard_tests {
                    "\nYour result (left) did not match expected output (right) for the given queues:\n{}\n",
                    print_queues(queues, capacity));
     }
-
+    #[test]
+    fn basic_01() {
+        do_test(&[vec![], vec![0]], 5, &[0, 1, 0]);
+    }
     #[test]
     fn test_up() {
         do_test(

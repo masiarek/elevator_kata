@@ -2,14 +2,24 @@ use crate::person::Person;
 
 pub struct Floor {
     floor_number: u16,
-    person: Person, // we need a queue - vector or array?
-                    // persons are waiting for the Lift to arrive at the Floor
-                    // represented as a number in a vector (array?)
+    persons_on_the_floor: Vec<Person>,
 }
 
-// the floor has a queue of persons waiting for the lift?
-// person has a floor they want to go to?
+// cheating - using chatGPT ...
+// the floor has a queue of persons waiting for the lift.
+impl Floor {
+    pub fn new(floor_number: u16) -> Floor {
+        Floor {
+            floor_number,
+            persons_on_the_floor: Vec::new(),
+        }
+    }
 
-// What is created first:
-// a person with a requested floor number
-// a flor - triggering persons to be created with a requested floor number
+    pub fn add_person(&mut self, person: Person) {
+        self.persons_on_the_floor.push(person);
+    }
+
+    pub fn get_few_persons_on_the_floor(&self) -> &Vec<Person> {
+        &self.persons_on_the_floor
+    }
+}

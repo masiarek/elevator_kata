@@ -1,7 +1,7 @@
 /*
 - The Lift only goes up or down.
 - Each floor has both UP and DOWN Lift-call buttons
-  (except top and ground floors which have only DOWN and UP respectively)
+  (except top and first floor which have only DOWN and UP respectively)
 - The Lift never changes direction until there are no more people
   wanting to get on/off in the direction it is already travelling
 - When empty the Lift tries to be smart. For example,
@@ -24,4 +24,9 @@ pub struct Lift {
     button: ButtonDirection,
     capacity: u8, // capacity maximum number of people allowed in the lift
     current_position: u16,
+    // passengers: Vec<Person>,
 }
+//
+// fn the_lift(queues, capacity){
+//
+// }
